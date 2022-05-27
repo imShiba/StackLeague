@@ -1,0 +1,15 @@
+using System;
+class Problem {
+    
+    public static int NbYear(int population, double percent, int additional, int targetPopulation) {
+      
+      double pop = Convert.ToDouble(population); 
+      int year = 0;
+      while(pop < targetPopulation){
+        pop = pop + pop * (percent / 100) + additional;
+        year += 1;
+      }
+      
+      return year;
+    }
+}
